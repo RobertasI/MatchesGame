@@ -6,12 +6,15 @@
 
     $("#Reset").click(function () {
         matchesCount = 21;
-        currentPlayer = firstPlayer;
+        currentPlayer = firstPlayer;       
         $("#CurrentPlayer").text(currentPlayer + " Turn");
         $("#Matches").empty();
         for (var i = 1; i <= matchesCount; i++) {
             $("#Matches").append("<span><img src='/Content/images/match.png' width='35' /></span> ");
         }
+        $("#Take1").show();
+        $("#Take2").show();
+        $("#Take3").show();
     });
 
     $("#Take1").click(function () {

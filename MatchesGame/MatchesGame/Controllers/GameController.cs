@@ -27,8 +27,10 @@ namespace MatchesGame.Controllers
                 };
 
                 gameLogDataService.Add(gameLog);
-                
-                return View("TwoPlayersGame", gameViewModel);
+                if(gameViewModel.GameType.Equals("Two Players")) {
+                    return View("TwoPlayersGame", gameViewModel);
+                }
+                else { return View("SinglePlayerGame", gameViewModel); }              
             }
 
             return View(gameViewModel);
