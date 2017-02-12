@@ -1,7 +1,7 @@
 ﻿$(function () {
     var dropDown = $("#GameType"),
         playerTwo = $("#PlayerTwo"),
-        secondPlayer = $("#secondPlayer");
+        secondPlayer = $("#SecondPlayer");
 
     if (dropDown.val() === "1") {
         playerTwo.val("Computer");

@@ -10,10 +10,6 @@ namespace MatchesGame.Models
         [Required(ErrorMessage = "Please enter first name")]
         public string PlayerOne { get; set; }
         [Required(ErrorMessage = "Please enter second name")]
-        public string PlayerTwo { get; set; }
-
-        
+        public string PlayerTwo { get; set; }        
     }
-
-
 }
