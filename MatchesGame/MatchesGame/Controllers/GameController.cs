@@ -1,6 +1,7 @@
 ﻿using MatchesGame.DataAccess;
 using MatchesGame.Domain;
 using MatchesGame.Models;
+using System;
 using System.Web.Mvc;
 
 namespace MatchesGame.Controllers
@@ -28,15 +29,32 @@ namespace MatchesGame.Controllers
 
                 gameLogDataService.Add(gameLog);
 
-                return View("TwoPlayersGame", gameViewModel);            
+                return View("Game", gameViewModel);            
             }
 
             return View(gameViewModel);
         }
 
-        public ActionResult TwoPlayersGame(GameViewModel gameViewModel)
+        public ActionResult Game(GameViewModel gameViewModel)
         {
             return View(gameViewModel);
+        }
+
+        [HttpPost]
+        public ActionResult Game(string Name, string Action)
+        {
+            Console.WriteLine(Name, Action);
+            var gameLogDataService = new GameLogDataService();
+            var gameLog = new GameLog
+            {
+                PlayerName = Name,
+                Time = System.DateTime.Now,
+                Action = Action
+            };
+            
+
+            gameLogDataService.Add(gameLog);
+            return PartialView();
         }
     }
 }

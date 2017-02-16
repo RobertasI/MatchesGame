@@ -8,11 +8,11 @@ namespace MatchesGame.Domain
     public class GameLog
     {
         [Key]
-        [Column(Order = 1)]
+        [Column(Order = 2)]
         public string PlayerName { get; set; }
 
         [Key]
-        [Column(Order = 2)]
+        [Column(Order = 1)]
         public DateTime Time { get; set; }
 
         [Key]
