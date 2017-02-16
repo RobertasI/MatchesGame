@@ -23,7 +23,7 @@ namespace MatchesGame.Controllers
                 var gameLog = new GameLog
                 {
                     PlayerName = "-",
-                    Time = System.DateTime.Now,
+                    Time = DateTime.Now,
                     Action = gameViewModel.PlayerOne + " and " + gameViewModel.PlayerTwo + " started the game"
                 };
 
@@ -43,15 +43,13 @@ namespace MatchesGame.Controllers
         [HttpPost]
         public ActionResult Game(string Name, string Action)
         {
-            Console.WriteLine(Name, Action);
             var gameLogDataService = new GameLogDataService();
             var gameLog = new GameLog
             {
                 PlayerName = Name,
-                Time = System.DateTime.Now,
+                Time = DateTime.Now,
                 Action = Action
             };
-            
 
             gameLogDataService.Add(gameLog);
             return PartialView();

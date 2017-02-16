@@ -11,9 +11,6 @@
         name = "",
         action = "";
         
-
-
-    
     init();
 
     function init() {
@@ -35,9 +32,11 @@
         updateButtons();
         updatePlayer();
         drawBoard();
-        takeMatchesAI();
-        var currentDate = new Date();
-        console.log(name, action, currentDate.toLocaleString());
+
+        if (currentPlayer === "Computer") {
+            takeMatchesAI();
+        }
+
         SubmitDataLog();
         
         function updateButtons() {
@@ -46,12 +45,7 @@
             updateButton(take3, 3);
 
             function updateButton(button, count) {
-                if (matchesCount < count) {
-                    button.hide();
-                }
-                else {
-                    button.show();
-                }
+                matchesCount < count ? button.hide() : button.show();
             };
         };
 
@@ -59,16 +53,12 @@
             if (matchesCount < 1) {
                 turn.text("Winner is: " + currentPlayer);
                 name = currentPlayer;
+                currentPlayer = '';
                 action = "Won";
             }
             else {
-                if (currentPlayer === firstPlayer) {                   
-                    currentPlayer = secondPlayer;
-                }
-                else {
-                    currentPlayer = firstPlayer;
-                }
-                turn.text(currentPlayer + " Turn");              
+                currentPlayer = currentPlayer === firstPlayer ? secondPlayer : firstPlayer;
+                turn.text(currentPlayer + " Turn");
             }
         };
 
@@ -78,53 +68,46 @@
     };
 
     $("#Reset").click(function () {
+        name = "-";
+        action = "Game Reset";
+        SubmitDataLog();
         init();
         take1.show();
         take2.show();
-        take3.show();
-        name = "-";
-        action = "Game Reset";
+        take3.show();        
     });
 
     take1.click(function () {
         name = currentPlayer;
         action = "Took 1";
         updateGame(1);
-        
     });
 
     take2.click(function () {
         name = currentPlayer;
         action = "Took 2";
-        updateGame(2);
-        
+        updateGame(2);        
     });
 
     take3.click(function () {
         name = currentPlayer;
         action = "Took 3";
-        updateGame(3);
-        
+        updateGame(3);        
     });
-
 
     function getRandomInt(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
-
     };
 
     function takeMatchesAI() {
         setTimeout(function () {
-            if (currentPlayer === "Computer") {
-                var random = getRandomInt(1, 3);
-                name = currentPlayer;
-                action = "Took " + random;
-                updateGame(random);               
-            }
+            var random = getRandomInt(1, 3);
+            name = currentPlayer;
+            action = "Took " + random;
+            updateGame(random);
         }, 2000);
     };
 
-    
     function SubmitDataLog() {
         $.ajax({
             type: "POST",
@@ -132,5 +115,4 @@
             data: { 'Name': name, 'Action': action }
         });
     };
-
 });

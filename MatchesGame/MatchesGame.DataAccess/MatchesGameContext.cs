@@ -1,7 +1,6 @@
 ﻿using MatchesGame.Domain;
 using System.Data.Entity;
 
-
 namespace MatchesGame.DataAccess
 {
     public class MatchesGameContext : DbContext

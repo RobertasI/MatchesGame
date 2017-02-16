@@ -17,7 +17,5 @@
             playerTwo.val("");
             secondPlayer.show();
         }
-
-        
     });
 });

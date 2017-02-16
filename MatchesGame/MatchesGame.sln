@@ -5,8 +5,6 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatchesGame", "MatchesGame\MatchesGame.csproj", "{F75EC767-B6CA-49E0-B02E-FB3075E09458}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatchesGame.Tests", "MatchesGame.Tests\MatchesGame.Tests.csproj", "{0850C9F5-55DB-40BB-BE5B-80ACB152EC90}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatchesGame.Domain", "MatchesGame.Domain\MatchesGame.Domain.csproj", "{888B3B8D-CF89-496C-ABA8-607303CF8176}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatchesGame.DataAccess", "MatchesGame.DataAccess\MatchesGame.DataAccess.csproj", "{8FBA8536-6D53-4734-8B36-31E0B62DE935}"
@@ -21,10 +19,6 @@ Global
 		{F75EC767-B6CA-49E0-B02E-FB3075E09458}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F75EC767-B6CA-49E0-B02E-FB3075E09458}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F75EC767-B6CA-49E0-B02E-FB3075E09458}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0850C9F5-55DB-40BB-BE5B-80ACB152EC90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0850C9F5-55DB-40BB-BE5B-80ACB152EC90}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0850C9F5-55DB-40BB-BE5B-80ACB152EC90}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0850C9F5-55DB-40BB-BE5B-80ACB152EC90}.Release|Any CPU.Build.0 = Release|Any CPU
 		{888B3B8D-CF89-496C-ABA8-607303CF8176}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{888B3B8D-CF89-496C-ABA8-607303CF8176}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{888B3B8D-CF89-496C-ABA8-607303CF8176}.Release|Any CPU.ActiveCfg = Release|Any CPU

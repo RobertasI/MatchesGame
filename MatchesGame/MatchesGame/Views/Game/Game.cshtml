@@ -4,32 +4,37 @@
     ViewBag.Title = "Matches Game";
 }
 
-<h2>Matches Game</h2>
-<div id="FirstPlayer">@Model.PlayerOne</div>
-<div id="SecondPlayer">@Model.PlayerTwo</div>
-
-<div class="col-md-12">
+<div id="MatchesGame" class="col-md-6">
     <div class="row">
-        <div class="col-md-6">
-            <div id="Matches" class="row"></div>
+        <h2 class="header">Matches Game</h2>
+        <div class="players">
+            <span id="FirstPlayer">@Model.PlayerOne</span> VS
+            <span id="SecondPlayer">@Model.PlayerTwo</span>
         </div>
-
-        <div class="col-md-6">
+        
+        <div class="col-md-12 game-board">
             <div class="row">
-                <div id="Turn">@Model.PlayerOne Turn</div>
-            </div>
+                <div class="col-md-6">
+                    <div id="Matches" class="row"></div>
+                </div>
 
-            <div class="row">
-                <button id="Take1" type="button" class="btn btn-primary">Take 1</button>
-                <button id="Take2" type="button" class="btn btn-primary">Take 2</button>
-                <button id="Take3" type="button" class="btn btn-primary">Take 3</button>
-            </div>
+                <div class="col-md-6 game-options">
+                    <div class="row">
+                        <div id="Turn">@Model.PlayerOne Turn</div>
+                    </div>
 
-            <div class="row">
-                <button id="Reset" type="button" class="btn btn-danger">Reset</button>
-                <button type="button" class="btn btn-warning">@Html.ActionLink("Options","Index")</button>
+                    <div class="row">
+                        <button id="Take1" type="button" class="btn btn-primary">Take 1</button>
+                        <button id="Take2" type="button" class="btn btn-primary">Take 2</button>
+                        <button id="Take3" type="button" class="btn btn-primary">Take 3</button>
+                    </div>
+
+                    <div class="row">
+                        <button id="Reset" type="button" class="btn btn-danger reset">Reset</button>
+                        <button type="button" class="btn btn-warning options">@Html.ActionLink("Options", "Index")</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
-

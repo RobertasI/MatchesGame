@@ -16,3 +16,63 @@ textarea {
     max-width: 280px;
 }
 
+#MatchesNavbar {
+    background-color: #141B41;
+}
+
+#MatchesNavbar .matches-brand {
+    color: #98B9F2;
+}
+
+#MatchesFormContainer {
+    float: none;
+    margin: 0 auto;
+}
+
+#MatchesFormContainer .header,
+#MatchesGame .header {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+#MatchesFormContainer .button-start {
+    display: block;
+    margin: 0 auto;
+}
+
+#MatchesGame {
+    float: none;
+    margin: 0 auto;
+}
+
+#MatchesGame .players {
+    height: 60px;
+    line-height: 60px;
+    font-size: 19px;
+    background-color: #98B9F2;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+#MatchesGame .game-board {
+    padding: 20px;
+}
+
+#MatchesGame .game-options {
+    text-align: center;
+}
+
+#MatchesGame #Turn {
+    padding: 20px;
+    font-size: 22px;
+    color: #141B41;
+    font-weight: bold;
+}
+
+#MatchesGame .reset,
+#MatchesGame .options {
+    margin-top: 22px;
+}
+
